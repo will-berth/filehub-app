@@ -15,7 +15,12 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 
-export default function Page() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{hub: string}>
+}) {
+  const hub = (await params).hub;
   return (
     <SidebarProvider>
       <AppSidebar />
