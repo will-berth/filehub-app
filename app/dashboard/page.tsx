@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar"
+import FileUploader from "@/components/file-uploader"
 import { ModeToggle } from "@/components/mode-toggle"
 import { NavActions } from "@/components/nav-actions"
 import {
@@ -38,12 +39,10 @@ export default function Page() {
             <NavActions />
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 px-4 py-10">
-          <div className="mx-auto h-24 w-full max-w-3xl rounded-xl bg-muted/50">
-            
+        <div className="flex flex-1 flex-col gap-4 px-4 py-10 justify-center">
+          <div className="mx-auto w-full max-w-3xl">
+            <FileUploader/>
           </div>
-          <div className="mx-auto h-24 w-full max-w-3xl rounded-xl bg-muted/50" />
-          <div className="mx-auto h-full w-full max-w-3xl rounded-xl bg-muted/50" />
         </div>
       </SidebarInset>
     </SidebarProvider>
